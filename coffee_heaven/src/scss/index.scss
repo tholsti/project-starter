@@ -1,3 +1,6 @@
+$bg-pri: rgba(112, 66, 35, 0.5);
+$pri: white;
+
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +8,14 @@
 }
 
 html {
-  font-family: Roboto;
+  font-family: PT Sans;
   font-size: 18px;
 }
 
 body {
-  background: black url("img/coffee-photo.jpg");
+  background: black url("img/coffee-photo.jpg") center;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -23,29 +28,42 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
   height: 100%;
-  background-color: rgba(112, 66, 35, 0.5);
+  background-color: $bg-pri;
+  color: $pri;
+  padding: 1rem 0 1rem 0;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    width: 25%;
+  }
+}
+
+p {
+  padding: 0 2rem 0 2rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300; 
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+  text-align: center;
+}
+
+button {
+  background-color: red;
+  border-radius: 0.5rem;
+  width: 80%;
+  padding: 1.5rem 0 1.5rem 0;
   color: white;
-
-  p {
-    padding: 0 2rem 0 2rem;
-    text-align: center;
-    font-size: 1.25rem;
-  }
-
-  h1 {
-    font-weight: 900;
-    font-size: 4rem;
-    text-align: center;
-  }
-
-  button {
-    background-color: red;
-    border-radius: 0.5rem;
-    width: 80%;
-    padding: 1rem 0 1rem 0;
-    color: white;
-    font-size: 2rem;
-  }
+  font-size: 2rem;
 }
